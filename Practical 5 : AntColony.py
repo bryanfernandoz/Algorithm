@@ -7,7 +7,7 @@ def distance(point1, point2):
 
 def ant_colony_optimization(points, n_ants, n_iterations, alpha, beta, evaporation_rate, Q):
     n_points = len(points)
-    pheromone = np.ones((n_points, n_points))#np.ones returns array of given shape & data type, where element value is set to 1
+    pheromone = np.ones((n_points, n_points))
     best_path = None
     best_path_length = np.inf
     
@@ -71,8 +71,8 @@ def ant_colony_optimization(points, n_ants, n_iterations, alpha, beta, evaporati
     ax.set_zlabel('Z Label')
     plt.show()
     
-# Example usage:
-points = np.random.rand(10, 3) # Generate 10 random 3D points
+
+points = np.random.rand(10, 3) 
 ant_colony_optimization(points, n_ants=10, n_iterations=100, alpha=1, beta=1, evaporation_rate=0.5, Q=1)
 
 
